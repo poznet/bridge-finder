@@ -1,0 +1,30 @@
+⏺ Jak dokładnie zlokalizować mostek:
+
+  1. Uruchom podstawowe wykrywanie:
+
+  sudo python main_simple.py --bridge-interactive
+
+  2. Użyj skryptu pomocniczego:
+
+  ./find_bridge.sh
+
+  3. Monitor ruchu (najbardziej dokładne):
+
+  sudo python monitor_bridge.py
+
+  4. Co otrzymasz:
+
+  - Adres MAC → możesz sprawdzić producenta
+  - Adresy IP → możesz się zalogować jeśli to zarządzalne urządzenie
+  - Typ urządzenia → switch L2, router, czy komputer z 2 kartami
+
+  5. Fizyczna lokalizacja:
+
+  - Jeśli to switch → sprawdź szafę sieciową
+  - Jeśli to PC → szukaj komputera z 2 kartami sieciowymi
+  - Jeśli to router → sprawdź konfigurację routingu
+
+  Najczęściej mostkiem jest:
+  - Switch z włączonym VLAN trunking
+  - Komputer z włączonym bridge/ICS
+  - Router z wyłączonym firewallem między interfejsami
